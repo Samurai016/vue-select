@@ -61,6 +61,7 @@
           ref="clearButton"
           :disabled="disabled"
           type="button"
+          :tabindex="clearButtonTabIndex"
           class="vs__clear"
           title="Clear Selected"
           aria-label="Clear Selected"
@@ -686,6 +687,18 @@ export default {
     uid: {
       type: [String, Number],
       default: () => uniqueId(),
+    },
+
+    /**
+      * Control the tabindex for the clear button.
+      * Useful in situations where you might want
+      * tab to focus the clear button instead of
+      * moving to the next element.
+      * @type {Boolean}
+      */
+    clearButtonTabIndex: {
+      type: Number,
+      default: -1
     },
   },
 

@@ -605,3 +605,14 @@ value: {
 	default: null
 },
 ```
+
+## clearButtonTabIndex
+
+Set the tabindex for the clear button.
+
+```js
+clearButtonTabIndex: {
+	type: Number,
+	default: -1
+},
+```
